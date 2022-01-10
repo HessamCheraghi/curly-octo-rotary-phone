@@ -45,7 +45,9 @@ const arrArr = function (arr1, arr2) {
   const cleaner = function (arrayToClean) {
     for (let i = 0; i < arrayToClean.length; i++) {
       if (arrayToClean[i] === false) {
+        // removing the false value from array.
         arrayToClean.splice(i, 1)
+        // going one itration back because one value is removed from array.
         i--
       } else if (arrayToClean[i] == null) {
         arrayToClean.splice(i, 1)
@@ -74,7 +76,7 @@ const arrArr = function (arr1, arr2) {
       }
     }
   }
-
+  // using es6 for removing duplicate values.
   console.log("shared elements : \n", Array.from(new Set(output)))
 }
 

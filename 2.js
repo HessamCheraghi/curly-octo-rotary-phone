@@ -1,7 +1,8 @@
 "use strict"
+// dummy password
 const password = "239"
 const checkIfPrime = function (number) {
-  // finding divisors of a number.
+  // finding divisor of a number.
   const divisors = []
   for (let i = 1; i <= number; i++) {
     if (Math.floor(number / i) === number / i) {

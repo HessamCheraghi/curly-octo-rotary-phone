@@ -21,14 +21,14 @@ const person = {
 }
 // I'm using recursion in here!
 const nullCatcher = function (obj, lastPropertyName = "") {
-  // first loop through all properties of the object
+  // first loop through all properties of the object.
   // for-in loop CAN loop through an object!
   for (const property in obj) {
     if (obj[property] == null) {
-      // if it's null or undefined say the property name
+      // if it's null or undefined say the property name.
       console.log(lastPropertyName + " " + property)
     } else if (typeof obj[property] === "object") {
-      // if it's a nested object call this function again and redo the proccess...
+      // if it's a nested object call this function again and redo the process...
       nullCatcher(obj[property], lastPropertyName + " " + property)
     }
   }
